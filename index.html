@@ -256,6 +256,7 @@
     <audio data-key="17" src="CI_-_Assault_3.mp3"></audio>
 
     <script>
+        console.log('A List of all rBreach Reval Songs. They all belong to the person who made it, Axel Nosferatu.')
         var running = 0;
 
         function playSound(e) {
@@ -263,12 +264,12 @@
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
             if (!audio) return; //stop the function
             if (running == 0) {
-                console.log(running, '0')
+                console.log(running, 'Not Running (0)')
                 audio.play();
                 running = 1
                 key.classList.add('playing');
             } else if (running == 1) {
-                console.log(running, '1')
+                console.log(running, 'Running (1)')
                 audio.currentTime = 0; //restart
                 audio.pause();
                 running = 0
