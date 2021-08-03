@@ -263,12 +263,12 @@
             const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
             if (!audio) return; //stop the function
             if (running == 0) {
-                console.log(running, '0')
+                console.log(running, 'Play')
                 audio.play();
                 running = 1
                 key.classList.add('playing');
             } else if (running == 1) {
-                console.log(running, '1')
+                console.log(running, 'Stop')
                 audio.currentTime = 0; //restart
                 audio.pause();
                 running = 0
